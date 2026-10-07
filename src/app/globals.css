@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Brand colors */
+  --color-brand-blue: #1358f3;
+  --color-brand-orange: #f77620;
+  --color-brand-yellow: #fed41f;
+
+  /* Neutrals */
+  --color-cream: #fffbf5;
+  --color-charcoal: #262421;
+
+  /* Semantic aliases — use these in components, not the raw brand-* names */
+  --color-primary: var(--color-brand-blue);
+  --color-accent: var(--color-brand-orange);
+  --color-highlight: var(--color-brand-yellow);
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-charcoal);
+
+  /* Type */
+  --font-display: "Baloo 2", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Radius — slightly rounded throughout, matches the friendly type */
+  --radius-card: 1rem;
+  --radius-chip: 999px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+.banner-swiper .swiper-pagination-bullet {
+  background: var(--color-foreground);
+  opacity: 0.4;
+}
+.banner-swiper .swiper-pagination-bullet-active {
+  background: var(--color-primary);
+  opacity: 1;
+}
+.banner-swiper .swiper-button-next,
+.banner-swiper .swiper-button-prev {
+  color: var(--color-foreground);
+  background: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.banner-swiper .swiper-button-next::after,
+.banner-swiper .swiper-button-prev::after {
+  font-size: 14px;
+}
+
+.banner-swiper .swiper-pagination-bullet {
+  background: var(--color-foreground);
+  opacity: 0.4;
+}
+.banner-swiper .swiper-pagination-bullet-active {
+  background: var(--color-highlight);
+  opacity: 1;
+}
